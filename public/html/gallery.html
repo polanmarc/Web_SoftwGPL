@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SoftGPL Gallery</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/custom.css">
+    <script defer src="../js/script.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+</head>
+<body>
+    <header class="bg-secondary">
+        <div class="navbar navbar-expand-lg container navbar-dark">
+            <div class="container-fluid">
+                <div class="animation-container">
+                    <div class="animated-element">
+                        <a class="navbar-brand" href="#">Soft<b class="text-primary">GPL</b></a>
+                    </div>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- Navar Basico -->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <nav>
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="index.html" tabindex="1">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="contact.html" tabindex="2">Contact</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false" tabindex="3">
+                                    Media
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="video.html" tabindex="4">Video</a></li>
+                                    <li><a class="dropdown-item" href="gallery.html" tabindex="5">Gallery</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#" tabindex="6">Something else here</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                    <!-- NavBar -->
+                    <div class="justify-content-center w-100 navbar-nav me-auto mb-2 mb-lg-0">
+                        <div class="d-flex w-100 justify-content-center">
+                            <a class="nav-link active" data-bs-toggle="modal" data-bs-target="#log-in" href="#" tabindex="7">Log In</a>
+                            <a class="nav-link active" data-bs-toggle="modal" data-bs-target="#sign-in" href="#" tabindex="8">Sign In</a>
+                        </div>
+                    </div>                                      
+                    <!-- Log IN -->
+                    <div class="modal fade" id="log-in" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header bg-primary">
+                                    <h1 class="modal-title fs-5 text-secondary" id="exampleModalLabel">Log In</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+                                        <div class="mb-3">
+                                            <label for="nameLogin" id="inpuNameLogin" class="form-label">Name</label>
+                                            <input type="text" class="form-control" id="nameLogin"
+                                                placeholder="Name" aria-labelledby="inpuNameLogin" tabindex="9">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="exampleInputEmail1" class="form-label">Email address</label>
+                                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                                placeholder="name@example.com" tabindex="10">
+                                        </div>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <button type="submit" class="btn btn-primary" tabindex="11">Log in</button>
+                                            <p class="mb-0">Are you not registered yet? <a data-bs-toggle="modal"
+                                                    data-bs-target="#sign-in" class="text-secondary" href="#">Sign In</a></p>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sign In -->
+
+                    <div class="modal fade" id="sign-in" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header text-light bg-primary">
+                                    <h1 class="modal-title fs-5 text-secondary" id="exampleModalLabel">Sign In</h1>
+                                    <button type="button" class="text-light bg-primary border-0" data-bs-dismiss="modal"
+                                        aria-label="Close"><i class="bi bi-x-lg"></i></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form class="row g-3">
+                                        <div class="col-md-6">
+                                            <label for="inputFirstNameRegister" class="form-label">First Name</label>
+                                            <input type="text" class="form-control" id="inputFirstNameRegister"
+                                                placeholder="Last Name" tabindex="12">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="inputLastNameRegister" class="form-label">Last Name</label>
+                                            <input type="text" class="form-control" id="inputLastNameRegister"
+                                                placeholder="First Name" tabindex="13">
+                                        </div>
+                                        <div class="col-12">
+                                            <label for="inputAddress" class="form-label">Email address</label>
+                                            <input type="email" class="form-control" id="inputAddress"
+                                                placeholder="name@example.com" tabindex="14">
+                                        </div>
+                                        <div class="col-12">
+                                            <label for="inputAddress2" class="form-label">Password</label>
+                                            <input type="password" class="form-control" id="inputAddress2"
+                                                placeholder="Password" tabindex="15">
+                                        </div>
+                                        <form class="row g-3">
+                                            <label for="" class="form-label">Date of Birth</label>
+                                            <div class="col-md-4 mt-0">
+                                                <select id="inputDay" class="form-select" tabindex="16">
+                                                    <option selected>Day</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-md-4 mt-0">
+                                                <select id="inputMonth" class="form-select" tabindex="17">
+                                                    <option selected>Month</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-md-4 mt-0">
+                                                <select id="inputYear" class="form-select" tabindex="18">
+                                                    <option selected>Year</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-12">
+                                                <label class="form-label">Gender</label>
+                                                <div class="row">
+                                                    <div class="custom-radius border">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="radio" name="gender"
+                                                                id="femaleRadio" tabindex="19">
+                                                            <label class="form-check-label"
+                                                                for="femaleRadio">Female</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="custom-radius border">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="radio" name="gender"
+                                                                id="maleRadio" tabindex="20">
+                                                            <label class="form-check-label" for="maleRadio">Male</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="custom-radius border">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="radio" name="gender"
+                                                                id="personalizedRadio" tabindex="21">
+                                                            <label class="form-check-label"
+                                                                for="personalizedRadio">Personalized</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <small class="mb-2 mt-2">By clicking Sign Up, you agree to our Terms. Learn
+                                                more about how we
+                                                collect, use, and share your information in the <a class="text-secondary"
+                                                    href="#">Data Policy</a>,
+                                                as well as our use of cookies and similar technologies in our <a
+                                                class="text-secondary" href="#">Cookie Policy</a>. We may send you SMS
+                                                notifications
+                                                that you can turn off at any time.
+                                            </small>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <button type="submit" class="btn btn-primary" tabindex="22">Sign in</button>
+                                                <p class="mb-0">Are you already registered?
+                                                    <a data-bs-toggle="modal" class="ms-2 text-secondary" data-bs-target="#log-in"
+                                                        href="#">Log In</a>
+                                                </p>
+                                            </div>
+                                        </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Offcanvas -->
+                    <button class="btn btn-primary me-2 d-flex justify-content-center align-items-center" type="button"
+                        data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+                        aria-controls="offcanvasRight" tabindex="23">Notifications<span
+                            class="badge bg-primary d-flex rounded-pill bg-secondary ms-2 mt-1">4</span></button>
+
+                    <!-- Search -->
+                    <form class="d-flex w-75" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" tabindex="24">
+                        <button class="btn btn-outline-success custom-search-button" type="submit" tabindex="25">Search</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- Offcanvas al abrirlo -->
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+            <div class="offcanvas-header bg-primary text-light">
+                <h5 class="offcanvas-title mb-0 text-secondary" id="offcanvasRightLabel">Notifications</h5>
+                <button type="button" class="text-light bg-primary border-0" data-bs-dismiss="offcanvas"
+                    aria-label="Close"><i class="bi bi-x-lg"></i></button>
+            </div>
+            <div class="offcanvas-body">
+                <p>Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images,
+                    lists, etc.</p>
+                <div class="list-group" role="listbox">
+                    <a href="#" class="list-group-item list-group-item-action" aria-current="true">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h5 class="mb-1">List group item heading</h5>
+                            <small class="text-secondary">3 days ago</small>
+                        </div>
+                        <p class="mb-1">Some placeholder content in a paragraph.</p>
+                        <small class="text-secondary">And some small print.</small>
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h5 class="mb-1">List group item heading</h5>
+                            <small class="text-secondary">3 days ago</small>
+                        </div>
+                        <p class="mb-1">Some placeholder content in a paragraph.</p>
+                        <small class="text-secondary">And some muted small print.</small>
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h5 class="mb-1">List group item heading</h5>
+                            <small class="text-secondary">3 days ago</small>
+                        </div>
+                        <p class="mb-1">Some placeholder content in a paragraph.</p>
+                        <small class="text-secondary">And some muted small print.</small>
+                    </a>
+                </div>
+                <button class="btn mt-3 btn-primary">Clear</button>
+            </div>
+        </div>
+    </header> 
+    <main class="container" role="main">
+        <section id="gallery" role="contentinfo">
+            <!-- Gallery -->
+            <div class="row mt-4" role="presentation">
+                <h1 class="mb-4" role="heading">Office Gallery</h1>
+                <div class="col-lg-4 col-md-12 mb-4 mb-lg-0" role="article">
+                    <picture>
+                        <source type="image/webp"
+                            srcset="https://res.cloudinary.com/dnrpstadc/image/upload/q_20/w_764/v1714816858/M9/Gallery/instalaciones-cocina.webp 764w,
+                                    https://res.cloudinary.com/dnrpstadc/image/upload/q_20/w_1024/v1714816858/M9/Gallery/instalaciones-cocina.webp 1024w,
+                                    https://res.cloudinary.com/dnrpstadc/image/upload/q_20/w_1240/v1714816858/M9/Gallery/instalaciones-cocina.webp 1240w"
+                            sizes="(max-width: 764px) 764px,
+                                    (max-width: 1024px) 1024px,
+                                    (max-width: 1240px) 1240px" />
+                        <source type="image/jpeg"
+                            srcset="https://res.cloudinary.com/dnrpstadc/image/upload/q_20/w_764/v1714816858/M9/Gallery/instalaciones-cocina.webp 764w,
+                                    https://res.cloudinary.com/dnrpstadc/image/upload/q_20/w_1024/v1714816858/M9/Gallery/instalaciones-cocina.webp 1024w,
+                                    https://res.cloudinary.com/dnrpstadc/image/upload/q_20/w_1240/v1714816858/M9/Gallery/instalaciones-cocina.webp 1240w"
+                            sizes="(max-width: 764px) 764px,
+                                    (max-width: 1024px) 1024px,
+                                    (max-width: 1240px) 1240px"/>
+                        <img class="w-100 shadow-1-strong rounded mb-4" alt="Kitchen installation" />
+                    </picture>
+                    <picture>
+                        <source type="image/webp"
+                            srcset="https://res.cloudinary.com/dnrpstadc/image/upload/q_20/w_764/v1714817363/M9/Gallery/oficinas-en-el-COVID.webp 764w,
+                                    https://res.cloudinary.com/dnrpstadc/image/upload/q_20/w_1024/v1714817363/M9/Gallery/oficinas-en-el-COVID.webp 1024w,
+                                    https://res.cloudinary.com/dnrpstadc/image/upload/q_20/w_1240/v1714817363/M9/Gallery/oficinas-en-el-COVID.webp 1240w"
+                            sizes="(max-width: 764px) 764px,
+                                    (max-width: 1024px) 1024px,
+                                    (max-width: 1240px) 1240px" />
+                        <source type="image/jpeg"
+                            srcset="https://res.cloudinary.com/dnrpstadc/image/upload/q_20/w_764/v1714817363/M9/Gallery/oficinas-en-el-COVID.webp 764w,
+                                    https://res.cloudinary.com/dnrpstadc/image/upload/q_20/w_1024/v1714817363/M9/Gallery/oficinas-en-el-COVID.webp 1024w,
+                                    https://res.cloudinary.com/dnrpstadc/image/upload/q_20/w_1240/v1714817363/M9/Gallery/oficinas-en-el-COVID.webp 1240w"
+                            sizes="(max-width: 764px) 764px,
+                                    (max-width: 1024px) 1024px,
+                                    (max-width: 1240px) 1240px"/>
+                        <img class="w-100 shadow-1-strong rounded mb-4" alt="installation in COVID" />
+                    </picture>
+                </div>
+                <div class="col-lg-4 mb-4 mb-lg-0" role="article">
+                    <picture>
+                        <source type="image/webp"
+                            srcset="https://res.cloudinary.com/dnrpstadc/image/upload/q_20/w_764/v1714817828/M9/Gallery/trabajadores-trabajando.webp 764w,
+                                    https://res.cloudinary.com/dnrpstadc/image/upload/q_20/w_1024/v1714817828/M9/Gallery/trabajadores-trabajando.webp 1024w,
+                                    https://res.cloudinary.com/dnrpstadc/image/upload/q_20/w_1240/v1714817828/M9/Gallery/trabajadores-trabajando.webp 1240w"
+                            sizes="(max-width: 764px) 764px,
+                                    (max-width: 1024px) 1024px,
+                                    (max-width: 1240px) 1240px" />
+                        <source type="image/jpeg"
+                            srcset="https://res.cloudinary.com/dnrpstadc/image/upload/q_20/w_764/v1714817828/M9/Gallery/trabajadores-trabajando.webp 764w,
+                                    https://res.cloudinary.com/dnrpstadc/image/upload/q_20/w_1024/v1714817828/M9/Gallery/trabajadores-trabajando.webp 1024w,
+                                    https://res.cloudinary.com/dnrpstadc/image/upload/q_20/w_1240/v1714817828/M9/Gallery/trabajadores-trabajando.webp 1240w"
+                            sizes="(max-width: 764px) 764px,
+                                    (max-width: 1024px) 1024px,
+                                    (max-width: 1240px) 1240px"/>
+                        <img class="w-100 shadow-1-strong rounded mb-4" alt="3 workers working in group" />
+                    </picture>
+                    <picture>
+                        <source type="image/webp"
+                            srcset="https://res.cloudinary.com/dnrpstadc/image/upload/q_20/w_764/v1714818010/M9/Gallery/main-installation.webp 764w,
+                                    https://res.cloudinary.com/dnrpstadc/image/upload/q_20/w_1024/v1714818010/M9/Gallery/main-installation.webp 1024w,
+                                    https://res.cloudinary.com/dnrpstadc/image/upload/q_20/w_1240/v1714818010/M9/Gallery/main-installation.webp 1240w"
+                            sizes="(max-width: 764px) 764px,
+                                    (max-width: 1024px) 1024px,
+                                    (max-width: 1240px) 1240px" />
+                        <source type="image/jpeg"
+                            srcset="https://res.cloudinary.com/dnrpstadc/image/upload/q_20/w_764/v1714818010/M9/Gallery/main-installation.webp 764w,
+                                    https://res.cloudinary.com/dnrpstadc/image/upload/q_20/w_1024/v1714818010/M9/Gallery/main-installation.webp 1024w,
+                                    https://res.cloudinary.com/dnrpstadc/image/upload/q_20/w_1240/v1714818010/M9/Gallery/main-installation.webp 1240w"
+                            sizes="(max-width: 764px) 764px,
+                                    (max-width: 1024px) 1024px,
+                                    (max-width: 1240px) 1240px"/>
+                        <img class="w-100 shadow-1-strong rounded mb-4" alt="Main installation" />
+                    </picture>
+                </div>
+                <div class="col-lg-4 mb-4 mb-lg-0" role="article">
+                    <picture>
+                        <source type="image/webp"
+                            srcset="https://res.cloudinary.com/dnrpstadc/image/upload/q_20/w_764/v1714818157/M9/Gallery/installation-outside.webp 764w,
+                                    https://res.cloudinary.com/dnrpstadc/image/upload/q_20/w_1024/v1714818157/M9/Gallery/installation-outside.webp 1024w,
+                                    https://res.cloudinary.com/dnrpstadc/image/upload/q_20/w_1240/v1714818157/M9/Gallery/installation-outside.webp 1240w"
+                            sizes="(max-width: 764px) 764px,
+                                    (max-width: 1024px) 1024px,
+                                    (max-width: 1240px) 1240px" />
+                        <source type="image/jpeg"
+                            srcset="https://res.cloudinary.com/dnrpstadc/image/upload/q_20/w_764/v1714818157/M9/Gallery/installation-outside.webp 764w,
+                                    https://res.cloudinary.com/dnrpstadc/image/upload/q_20/w_1024/v1714818157/M9/Gallery/installation-outside.webp 1024w,
+                                    https://res.cloudinary.com/dnrpstadc/image/upload/q_20/w_1240/v1714818157/M9/Gallery/installation-outside.webp 1240w"
+                            sizes="(max-width: 764px) 764px,
+                                    (max-width: 1024px) 1024px,
+                                    (max-width: 1240px) 1240px"/>
+                        <img class="w-100 shadow-1-strong rounded mb-4" alt="Outside installation" />
+                    </picture>
+                    <picture>
+                        <source type="image/webp"
+                            srcset="https://res.cloudinary.com/dnrpstadc/image/upload/q_20/w_764/v1714818315/M9/Gallery/manager-office.webp 764w,
+                                    https://res.cloudinary.com/dnrpstadc/image/upload/q_20/w_1024/v1714818315/M9/Gallery/manager-office.webp 1024w,
+                                    https://res.cloudinary.com/dnrpstadc/image/upload/q_20/w_1240/v1714818315/M9/Gallery/manager-office.webp 1240w"
+                            sizes="(max-width: 764px) 764px,
+                                    (max-width: 1024px) 1024px,
+                                    (max-width: 1240px) 1240px" />
+                        <source type="image/jpeg"
+                            srcset="https://res.cloudinary.com/dnrpstadc/image/upload/q_20/w_764/v1714818315/M9/Gallery/manager-office.webp 764w,
+                                    https://res.cloudinary.com/dnrpstadc/image/upload/q_20/w_1024/v1714818315/M9/Gallery/manager-office.webp 1024w,
+                                    https://res.cloudinary.com/dnrpstadc/image/upload/q_20/w_1240/v1714818315/M9/Gallery/manager-office.webp 1240w"
+                            sizes="(max-width: 764px) 764px,
+                                    (max-width: 1024px) 1024px,
+                                    (max-width: 1240px) 1240px"/>
+                        <img class="w-100 shadow-1-strong rounded mb-4" alt="Manager installation" />
+                    </picture>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="bg-secondary mt-5">
+        <div class="container py-4">
+            <div class="row">
+                <div class="col-md-3" role="contentinfo">
+                    <h2 class="text-primary fs-4">Quick Links</h2>
+                    <ul class="list-unstyled">
+                        <li><a tabindex="41" class="text-footer text-light link-primary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
+                                href="index.html" aria-label="Go to Home">Home</a></li>
+                        <li><a tabindex="42" class="text-footer text-light link-primary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
+                                href="contact.html" aria-label="Contact Us">Contact</a></li>
+                        <li><a tabindex="43" class="text-footer text-light link-primary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
+                                href="#" aria-label="User Profile">User Profile</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3" role="contentinfo">
+                    <h2 class="text-primary fs-4">Services</h2>
+                    <ul class="list-unstyled">
+                        <li><a tabindex="44" class="text-footer text-light link-primary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" href="#" aria-label="Web Design">Web Design</a></li>
+                        <li><a tabindex="45" class="text-footer text-light link-primary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" href="#" aria-label="Software Development">Software Development</a></li>
+                        <li><a tabindex="46" class="text-footer text-light link-primary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" href="#" aria-label="Digital Marketing">Digital Marketing</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3" role="contentinfo">
+                    <h2 class="text-primary fs-4">Social Media</h2>
+                    <ul class="list-unstyled">
+                        <li><a tabindex="47" class="text-footer text-light link-primary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
+                                href="#" aria-label="Facebook">Facebook</a></li>
+                        <li><a tabindex="48" class="text-footer text-light link-primary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
+                                href="#" aria-label="Twitter">Twitter</a></li>
+                        <li><a tabindex="49" class="text-footer text-light link-primary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
+                                href="#" aria-label="Instagram">Instagram</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3" role="contentinfo">
+                    <h2 class="text-primary fs-4">Contact Us</h2>
+                    <p class="text-footer m-0">123 Thos i Coidna, Mataró, Spain</p>
+                    <p class="text-footer m-0">Email: thos.polan.marc@gmail.com</p>
+                    <p class="text-footer m-0">Phone: +123 456 7890</p>
+                </div>
+            </div>
+        </div>
+    </footer>    
+</body>
+
+</html>
